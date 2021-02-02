@@ -1,1 +1,19 @@
-f
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Handlebars</title>
+    <link rel="stylesheet" href="base.css">
+  </head>
+  <body>
+    <div class="container">
+      <script id="rover-image-template" type="text/x-handlebars-template">
+        {{#each photos}}
+          <div><img src="{{this.img_src}}" alt="mars"></img></div>
+        {{/each}}
+      </script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
