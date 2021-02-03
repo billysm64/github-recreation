@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Handlebars</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
@@ -13,7 +13,13 @@
         {{/each}}
       </script>
     </div>
+    <script id="repositories" class="repositories" type="text/x-handlebars-template">
+      {{#each }}
+      <p>this.login</p>
+      {{/each}}
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="./token.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
