@@ -7,17 +7,40 @@
   </head>
   <body>
     <div class="container">
-      <script id="rover-image-template" type="text/x-handlebars-template">
-        {{#each photos}}
-          <div><img src="{{this.img_src}}" alt="mars"></img></div>
-        {{/each}}
-      </script>
+
+      <div class='aside'>
+        <div class="profile"></div>
+        <div class="orgs"></div>
+      </div>
+      <div class="repos">
+
+      </div>
     </div>
-    <script id="repositories" class="repositories" type="text/x-handlebars-template">
-      {{#each }}
-      <p>this.login</p>
+
+
+    <script id="profile-template" type="text/x-handlebars-template">
+      <img src="{{this.avatar_url}}" />
+      <p>{{this.login}}</p>
+    </script>
+
+    <script id="repos-template" type="text/x-handlebars-template">
+      {{#each repos}}
+        <div>
+          <a href="{{this.url}}">{{this.name}}</a>
+          <p>{{this.language}}</p>
+          <p>{{this.updated_at}}</p>
+        </div>
       {{/each}}
     </script>
+
+    <script id="orgs-template" type="text/x-handlebars-template">
+      <h2>Organizations</h2>
+      {{#each orgs}}
+        <div><img src="{{this.avatar_url}}" alt="orgization"></div>
+      {{/each}}
+    </script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <script src="./token.js"></script>
     <script src="./main.js"></script>
